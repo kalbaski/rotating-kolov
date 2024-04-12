@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Monomakh Unicode TT';
+    src: url('MonomakhUnicodeTT.eot');
+    src: local('Monomakh Unicode TT Medium'), local('MonomakhUnicodeTT'),
+        url('MonomakhUnicodeTT.eot?#iefix') format('embedded-opentype'),
+        url('MonomakhUnicodeTT.woff') format('woff'),
+        url('MonomakhUnicodeTT.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+.i{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 90vh; 
+}
+
+img{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotate(0deg);
+    animation: rotateAnimation 5s linear infinite;
+}
+
+@keyframes rotateAnimation {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    background: url(scale_1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Monomakh Unicode TT';
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .mushroom {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('mashroom.png');
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #score {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 45px;
+    color: black;
+    background-color: white;
+  }
+
+  audio{
+    position: absolute;
+  }
+
+.old {
+    display: none;
+}
+
+.button-container{
+    margin: 50px 0;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    z-index: 999; 
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #3499f2;
+    margin: 2px 0;
+}
+
+.menu {
+    list-style: none;
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 34px;
+
+    background-color: #3499f2d4;
+    padding: 10px;
+    height: 40%;
+    z-index: 20;
+}
+
+.menu li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.menu.active {
+    display: flex;
+  }
